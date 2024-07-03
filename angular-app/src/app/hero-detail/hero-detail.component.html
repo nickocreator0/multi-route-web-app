@@ -1,0 +1,20 @@
+<div *ngIf="hero">
+  <h2>{{hero.name | uppercase}} Details</h2>
+  <div><span>id: </span>{{hero.id}}</div>
+  <div>
+    <label for="hero-name">Hero name: </label>
+    <input id="hero-name" [(ngModel)]="hero.name" placeholder="Hero name"/>
+  </div>
+
+  <!-- Hero Image display -->
+  <div>
+    <label for="hero-image">Hero Image: </label>
+    <input type="file" id="hero-image" (change)="onFileSelected($event)"/>
+    <div class="drop-zone" (drop)="onDrop($event)" (dragover)="onDragOver($event)">
+      Drag and Drop Image Here
+    </div>
+    <img *ngIf="hero.imageUrl" [src]="hero.imageUrl" alt="Hero Image" class="hero-image">
+  </div>
+
+  <button type="button" (click)="goBack()"> Back </button>
+</div>

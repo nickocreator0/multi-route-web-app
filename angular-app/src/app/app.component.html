@@ -1,0 +1,35 @@
+<h1> {{ title }} </h1>
+<!--The <router-outlet> tells the router where to display routed views-->
+<!--<nav>-->
+<!--  <a routerLink="/heroes">Heroes</a>-->
+<!--  <a routerLink="/fibonacci">Fibonacci</a>-->
+<!--  <a routerLink="/reddit">Reddit Article Rating</a>-->
+<!--  <a routerLink="/login">Log In</a>-->
+<!--</nav>-->
+<!--<div id="content">-->
+<!--  <div class="container">-->
+<!--    <router-outlet></router-outlet>-->
+<!--  </div>-->
+<!--</div>-->
+
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav" routerLinkActive="active">
+      <a class="nav-link" routerLink="home">Home</a>
+      <a class="nav-link" routerLink="heroes">Heroes</a>
+      <a class="nav-link" routerLink="fibonacci">Fibonacci</a>
+      <a class="nav-link" routerLink="reddit">Reddit Articles</a>
+      <a class="nav-link" routerLink="students">Students</a>
+      <a *ngIf="authority === 'user'" class="nav-link" routerLink="user">User Page</a>
+      <a *ngIf="authority === 'admin'" class="nav-link" routerLink="admin">Admin Page</a>
+      <a *ngIf="!authority" class="nav-item" routerLink="auth/login">Login</a>
+    </ul>
+  </div>
+</nav>
+
+<div id="content">
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
+</div>

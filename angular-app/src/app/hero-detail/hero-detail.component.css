@@ -1,0 +1,45 @@
+/* HeroDetailComponent's private CSS styles */
+label {
+  color: #435960;
+  font-weight: bold;
+}
+input {
+  font-size: 1em;
+  padding: .5rem;
+}
+button {
+  margin-top: 20px;
+  background-color: #eee;
+  padding: 1rem;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+button:hover {
+  background-color: #cfd8dc;
+}
+button:disabled {
+  background-color: #eee;
+  color: #ccc;
+  cursor: auto;
+}
+
+/*Image drag and drop*/
+.drop-zone {
+  border: 2px dashed #ccc;
+  padding: 20px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.drop-zone:hover {
+  background-color: #f0f0f0;
+}
+
+/* Hero image style */
+.hero-image {
+  display: block;
+  margin: 0 auto;
+  max-width: 300px; /* Adjust the size as needed */
+  max-height: 300px; /* Adjust the size as needed */
+}
+

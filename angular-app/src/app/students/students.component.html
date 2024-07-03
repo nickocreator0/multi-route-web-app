@@ -1,0 +1,69 @@
+<h2>Students</h2>
+<div>
+  <label>Student firstname:
+    <input #studentFirstName />
+  </label>
+  <br>
+  <label>Student lastname:
+    <input #studentLastName />
+  </label>
+  <br>
+  <label>Student email:
+    <input #studentEmail />
+  </label>
+  <br>
+  <label>Student telephone:
+    <input #studentTelephone />
+  </label>
+  <br>
+
+  <!-- Account and team -->
+  <label>Account Name:
+    <input #studentAccountName />
+  </label>
+  <br>
+  <label>Student Teams: (comma-separated)
+    <input #studentTeams />
+  </label>
+  <br>
+
+  <!-- Address Fields -->
+  <label>Address city:
+    <input #addressCity />
+  </label>
+  <br>
+  <label>Address street:
+    <input #addressStreet />
+  </label>
+  <br>
+  <label>Address number:
+    <input #addressNumber />
+  </label>
+  <br>
+  <label>Address postal code:
+    <input #addressPostalCode />
+  </label>
+  <br>
+
+
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button (click)="add(studentFirstName.value, studentLastName.value, studentEmail.value, studentTelephone.value, addressCity.value, addressStreet.value, addressNumber.value, addressPostalCode.value, studentAccountName.value, studentTeams.value);
+                  studentFirstName.value=''; studentLastName.value=''; studentEmail.value=''; studentTelephone.value=''; addressCity.value=''; addressStreet.value=''; addressNumber.value=''; addressPostalCode.value=''; studentAccountName.value=''; studentTeams.value=''">
+    add
+  </button>
+</div>
+<ul>
+  <li *ngFor="let student of studentList">
+    <span class="badge">{{student.id}}</span> {{ student.firstname }} {{ student.lastname }} {{ student.email }} {{ student.telephone }}
+    <button title="delete" (click)="delete(student)">delete</button>
+    <button title="update" (click)="update(studentFirstName.value, studentLastName.value, studentEmail.value, studentTelephone.value, student);
+                            studentFirstName.value=''; studentLastName.value=''; studentEmail.value=''; studentTelephone.value=''">
+      Update
+    </button>
+  </li>
+</ul>
+<button title="delete all" (click)="deleteAll()">delete all</button>
+
+
+
+

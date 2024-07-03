@@ -1,0 +1,84 @@
+/* HeroesComponent's private CSS styles */
+.heroes {
+  margin: 0 0 2em 0;
+  list-style-type: none;
+  padding: 30;
+  width: 15em; /* Increased width for better readability */
+}
+
+.heroes li {
+  position: relative;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out; /* Added smooth hover transition */
+}
+
+.heroes li:hover {
+  left: .2em; /* Slightly increased hover indent */
+  background-color: #f5f5f5; /* Lighter hover background for subtle effect */
+}
+
+.heroes a {
+  color: #f3eeee;
+  text-decoration: none;
+  background-color: #333333; /* Changed to white background for better contrast */
+  border: 1px solid #ddd; /* Added subtle border */
+  margin: .5em;
+  padding: .5em 1em; /* Increased padding for better spacing */
+  height: auto; /* Removed fixed height for better content fit */
+  border-radius: 4px;
+  display: block;
+  width: 100%;
+}
+
+.heroes a:hover {
+  color: #42545C;
+  background-color: #ecde99;
+}
+
+.heroes a:active {
+  background-color: #42545C;
+  color: #dcbf8b;
+}
+
+.heroes .badge {
+  display: inline-block;
+  font-size: 0.8em;
+  color: white;
+  padding: 0.5em 0.7em 0 0.7em;
+  background-color: #333333FF;
+  line-height: 1em;
+  position: relative;
+  left: -1px;
+  top: -4px;
+  height: auto;
+  min-width: 16px;
+  text-align: right;
+  margin-right: .8em;
+  border-radius: 4px 0 0 4px;
+}
+
+.heroes .badge:hover {
+  color: #29373D;
+}
+
+
+.container {
+  position: relative;
+}
+
+.tooltip {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  z-index: 999;
+}
+
+.heroes {
+  z-index: 1;
+}
+

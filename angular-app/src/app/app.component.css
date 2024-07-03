@@ -1,0 +1,37 @@
+/* AppComponent's private CSS styles */
+
+h1 {
+  margin-bottom: 0;
+  font-size: 2rem; /* Increase heading size for prominence */
+  font-weight: bold; /* Add weight for emphasis */
+  color: #f5f3f3; /* Consistent color with links */
+  text-align: center; /* Center align for main content */
+}
+
+nav {
+  display: flex; /* Use flexbox for cleaner navigation layout */
+  justify-content: space-between; /* Distribute links evenly */
+  padding: 6rem 0; /* Add some padding for visual balance */
+}
+
+nav a {
+  padding: 0.8rem 1.2rem; /* Adjust padding for better proportions */
+  font-size: 1rem; /* Consistent font size with overall UI */
+  color: #eae7df; /* Consistent color with heading */
+  text-decoration: none;
+  margin: 0 50px; /* Add some margin for separation */
+  background-color: transparent; /* Remove background by default */
+  border: 1px solid #e8e8e8; /* Add subtle border for visibility */
+  border-radius: 4px;
+  transition: background-color 0.2s ease-in-out; /* Smooth transition on hover */
+}
+
+nav a:hover {
+  background-color: #e8e8e8; /* Lighter hover background for readability */
+  color: #42545C; /* Match hover link color with original background */
+}
+
+nav a:active {
+  background-color: #42545C; /* Active state color */
+  color: white; /* Inverted text color for active state */
+}

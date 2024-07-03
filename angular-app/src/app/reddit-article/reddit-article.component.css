@@ -1,0 +1,62 @@
+/* Styling for number of votes */
+.votes {
+  text-align: center;
+}
+
+.ui.statistic {
+  display: inline-block;
+  background-color: #70b676;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+}
+
+.ui.statistic .value {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #000000;
+}
+
+.ui.statistic .label {
+  font-size: 0.8em;
+  color: #000000;
+}
+
+/* Styling for article info */
+.twelve.wide.column {
+  padding: 1em;
+}
+
+.ui.large.header {
+  font-size: 1.8em;
+  color: #fff; /* Changed to white text for better visibility */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.ui.large.header:hover {
+  color: #6daf72; /* Lightened hover color */
+}
+
+.meta {
+  font-size: 0.9em;
+  color: #bbb; /* Lightened text color */
+  margin-bottom: 0.5em;
+}
+
+.ui.big.horizontal.list.voters {
+  margin-top: 1em;
+}
+
+.ui.big.horizontal.list.voters .item {
+  display: inline-block;
+}
+
+.ui.big.horizontal.list.voters .item a {
+  color: #bbb;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.ui.big.horizontal.list.voters .item a:hover {
+  color: #70b676;
+}

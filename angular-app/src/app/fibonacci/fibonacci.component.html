@@ -1,0 +1,27 @@
+<form class="ui large form segment">
+  <h3 class="ui header">Enter a positive integer as an input</h3>
+
+  <!--  input tag 1-->
+  <div class="field">
+    <label for="num">Input:</label>
+    <input name="num" #inputNumber>
+  </div>
+
+  <!-- Add submit button -->
+  <button (click)="calculateButton(inputNumber)"
+          class="ui positive right floated button">
+    Calculate
+  </button>
+
+  <!--  Show the result-->
+  <div>
+    <p>{{ fibonacciResult }}</p>
+  </div>
+
+  <!--  Display an error if the input is negative-->
+  <div>
+    <p style="color: red">{{ invalidInputError }}</p>
+  </div>
+
+</form>
+<button type="button" (click)="goBack()"> Back </button>
